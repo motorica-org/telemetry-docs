@@ -1,0 +1,32 @@
+@startuml
+skinparam componentStyle uml2
+
+package Hardware {
+    [FlexSensor] -> [MCU]
+    [MCU] -> [BLE]
+}
+
+package Mobile {
+    [BLE] -> [Aggregator]
+    [Aggregator] -> [Monsik]
+}
+
+package Server {
+    package Storage {
+        [Aggregator] -> [Storage]
+    }
+    package Analytics {
+        [Storage] -> [Worker]
+        [Worker] -> [Visualizator]
+    }
+}
+
+package Clients {
+    [Monsik] -> [Child]
+    
+    [Visualizator] -> [Parents]
+    [Visualizator] -> [Analytics]
+    [Visualizator] -> [CEO]
+}
+
+@enduml
