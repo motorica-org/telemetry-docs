@@ -31,13 +31,17 @@ package Server {
     }
 }
 
-package Clients {
-    [Child] <- [Monsik]
+package Actors {
+    actor Child
+    actor Parent
+    actor Analytic
 
-    [Parents] <- [Visualizator]
+    Child <- [Monsik]
 
-    [Analytics] <- [QueryEngine]
-    [Analytics] <- [Visualizator]
+    Parent <- [Visualizator]
+
+    Analytic <- [QueryEngine]
+    Analytic <- [Visualizator]
 }
 
 @enduml
