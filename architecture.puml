@@ -40,8 +40,8 @@ package Actors {
 
     Parent <- [Visualizator]
 
-    Analytic <- [QueryEngine]
-    Analytic <- [Visualizator]
+    Analytic <-u- [QueryEngine]
+    Analytic <-u- [Visualizator]
 }
 
 @enduml
