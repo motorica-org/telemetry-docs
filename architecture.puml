@@ -22,8 +22,8 @@ package Server {
         [Aggregator] -> [Storage]
     }
     package Analytics {
-        [Storage] -> [Worker]
-        [Worker] -> [Visualizator]
+        [Storage] -> [QueryEngine]
+        [QueryEngine] -> [Visualizator]
     }
 }
 
@@ -32,7 +32,7 @@ package Clients {
 
     [Parents] <- [Visualizator]
 
-    [Analytics] <- [Worker]
+    [Analytics] <- [QueryEngine]
     [Analytics] <- [Visualizator]
 }
 
