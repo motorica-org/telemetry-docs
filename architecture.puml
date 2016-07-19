@@ -23,10 +23,10 @@ package Mobile {
 package Server {
     package Storage {
         [Aggregator] -> [RawCache]
-        [RawCache] -> [Storage]
+        [RawCache] -> [ParsedStorage]
     }
     package Analytics {
-        [Storage] -> [QueryEngine]
+        [ParsedStorage] -> [QueryEngine]
         [QueryEngine] -> [Visualizator]
     }
 }
