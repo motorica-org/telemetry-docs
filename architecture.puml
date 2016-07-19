@@ -19,7 +19,8 @@ package Mobile {
 
 package Server {
     package Storage {
-        [Aggregator] -> [Storage]
+        [Aggregator] -> [RawCache]
+        [RawCache] -> [Storage]
     }
     package Analytics {
         [Storage] -> [QueryEngine]
