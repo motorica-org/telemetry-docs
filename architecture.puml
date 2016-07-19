@@ -10,6 +10,9 @@ package Hardware {
     }
 
     [MCU] -> [BLE]
+
+    note bottom of [MCU]: Teensy 3.2
+    note bottom of [BLE]: nrf51822
 }
 
 package Mobile {
