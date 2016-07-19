@@ -2,7 +2,13 @@
 skinparam componentStyle uml2
 
 package Hardware {
-    [FlexSensor] -> [MCU]
+    component MCU
+    component BLE
+
+    package Sensors {
+        [FlexSensor] -> [MCU]
+    }
+
     [MCU] -> [BLE]
 }
 
