@@ -28,11 +28,12 @@ package Server {
 }
 
 package Clients {
-    [Monsik] -> [Child]
-    
-    [Visualizator] -> [Parents]
-    [Visualizator] -> [Analytics]
-    [Visualizator] -> [CEO]
+    [Child] <- [Monsik]
+
+    [Parents] <- [Visualizator]
+
+    [Analytics] <- [Worker]
+    [Analytics] <- [Visualizator]
 }
 
 @enduml
