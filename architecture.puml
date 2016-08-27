@@ -1,6 +1,8 @@
 @startuml
 skinparam componentStyle uml2
 
+interface "BLE Profile" [[https://github.com/motorica-org/telemetry-docs/wiki/BLE-Profile]]
+
 package Hardware {
     component MCU
     component BLE
@@ -10,13 +12,14 @@ package Hardware {
     }
 
     [MCU] -> [BLE]
+    [BLE] - (BLE Profile)
 
     note bottom of [MCU]: Teensy 3.2
     note bottom of [BLE]: nrf51822
 }
 
 package Mobile {
-    [BLE] -> [Aggregator]
+    (BLE Profile) -> [Aggregator]
     [Aggregator] -> [Monsik]
 }
 
@@ -43,5 +46,4 @@ package Actors {
     Analytic <-u- [QueryEngine]
     Analytic <-u- [Visualizator]
 }
-
 @enduml
