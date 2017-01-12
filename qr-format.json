@@ -1,0 +1,16 @@
+{
+	"type": "qrconfig.motorica.org",
+	"version": 0.2,
+	"prosthetic":
+	{
+		"kind": "mechanical",
+		"mac":  "A4:5E:60:B9:B8:24"
+	},
+	"matrix":
+	{
+		"home_server": "https://localhost",
+		"user": "vasiliy.pupkin",
+		"password": "iamverysecret",
+		"room_stream_to": "!TmaZBKYIFrIPVGoUYp:localhost"
+	}
+}
