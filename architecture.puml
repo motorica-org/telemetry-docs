@@ -32,12 +32,14 @@ package Server {
     package Analytics {
         [ParsedStorage] -> [QueryEngine]
         [QueryEngine] -> [Visualizer]
+        [QueryEngine] -> [Alerting]
     }
 
     note bottom of RawCache: Matrix.org
     note bottom of ParsedStorage: InfluxDB
     note bottom of QueryEngine: InfluxDB
     note bottom of Visualizer: Grafana
+    note bottom of Alerting: Kapacitor
 }
 
 package Actors {
@@ -48,6 +50,7 @@ package Actors {
     Child <- [Monsik]
 
     Parent <- [Visualizer]
+    Parent <- [Alerting]
 
     Analytic <-u- [QueryEngine]
     Analytic <-u- [Visualizer]
