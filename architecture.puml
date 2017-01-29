@@ -14,7 +14,7 @@ package Hardware {
     [MCU] -> [BLE]
     [BLE] - (BLE Profile)
 
-    note bottom of [MCU]: Teensy 3.2
+    note bottom of [MCU]: integrated w/BLE
     note bottom of [BLE]: nrf51822
 }
 
