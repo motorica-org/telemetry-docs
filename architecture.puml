@@ -33,6 +33,11 @@ package Server {
         [ParsedStorage] -> [QueryEngine]
         [QueryEngine] -> [Visualizer]
     }
+
+    note bottom of RawCache: Matrix.org
+    note bottom of ParsedStorage: InfluxDB
+    note bottom of QueryEngine: InfluxDB
+    note bottom of Visualizer: Grafana
 }
 
 package Actors {
