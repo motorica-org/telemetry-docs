@@ -30,7 +30,7 @@ package Server {
     }
     package Analytics {
         [ParsedStorage] -> [QueryEngine]
-        [QueryEngine] -> [Visualizator]
+        [QueryEngine] -> [Visualizer]
     }
 }
 
@@ -41,9 +41,9 @@ package Actors {
 
     Child <- [Monsik]
 
-    Parent <- [Visualizator]
+    Parent <- [Visualizer]
 
     Analytic <-u- [QueryEngine]
-    Analytic <-u- [Visualizator]
+    Analytic <-u- [Visualizer]
 }
 @enduml
