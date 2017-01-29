@@ -1,5 +1,6 @@
 @startuml
 skinparam componentStyle uml2
+left to right direction
 
 interface "BLE Profile" [[https://github.com/motorica-org/telemetry-docs/wiki/BLE-Profile]]
 
