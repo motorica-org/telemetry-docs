@@ -52,7 +52,7 @@ package Actors {
     Parent <- [Visualizer]
     Parent <- [Alerting]
 
-    Analytic <-u- [QueryEngine]
-    Analytic <-u- [Visualizer]
+    Analytic <- [QueryEngine]
+    Analytic <- [Visualizer]
 }
 @enduml
