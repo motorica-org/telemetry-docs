@@ -18,6 +18,7 @@ package Hardware {
         [FlexSensor] -> [MCU]
     }
 }
+url of Hardware is [[https://gitlab.com/motorica-org/telemetry-hardware-nrf51822-nrf5xbase]]
 
 package Mobile {
     (BLE Profile) -> [Aggregator]
