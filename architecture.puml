@@ -6,18 +6,17 @@ interface "BLE Profile" [[https://github.com/motorica-org/telemetry-docs/wiki/BL
 interface "Matrix Datagram" [[https://github.com/motorica-org/telemetry-docs/wiki/Matrix-datagram]]
 
 package Hardware {
-    component MCU
-    component BLE
+    package SmartControllers {
+        [MCU] -> [BLE]
+        [BLE] - (BLE Profile)
 
-    package Sensors {
-        [FlexSensor] -> [MCU]
+        note bottom of [MCU]: integrated w/BLE
+        note bottom of [BLE]: nrf51822
     }
 
-    [MCU] -> [BLE]
-    [BLE] - (BLE Profile)
-
-    note bottom of [MCU]: integrated w/BLE
-    note bottom of [BLE]: nrf51822
+    package DumbSensors {
+        [FlexSensor] -> [MCU]
+    }
 }
 
 package Mobile {
