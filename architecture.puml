@@ -3,6 +3,7 @@ skinparam componentStyle uml2
 left to right direction
 
 interface "BLE Profile" [[https://github.com/motorica-org/telemetry-docs/wiki/BLE-Profile]]
+interface "Matrix Datagram" [[https://github.com/motorica-org/telemetry-docs/wiki/Matrix-datagram]]
 
 package Hardware {
     component MCU
@@ -22,11 +23,12 @@ package Hardware {
 package Mobile {
     (BLE Profile) -> [Aggregator]
     [Aggregator] -> [Monsik]
+    [Aggregator] - (Matrix Datagram)
 }
 
 package Server {
     package Storage {
-        [Aggregator] -> [RawCache]
+        (Matrix Datagram) -> [RawCache]
         [RawCache] -> [ParsedStorage]
     }
     package Analytics {
